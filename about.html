@@ -240,7 +240,34 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
-        
+
+    <!-- Q2 Script -->
+    <script>
+        function getObjectType(target) {
+          if (target.tagName === 'IMG') return 'image';
+          if (target.tagName === 'A') return 'link';
+          if (target.tagName === 'P' || target.tagName === 'SPAN' || target.tagName === 'H1' || target.tagName === 'H2' || target.tagName === 'H3' || target.tagName === 'H4') return 'text';
+          if (target.tagName === 'BUTTON' || target.tagName === 'INPUT') return 'button/input';
+          return 'other';
+        }
+    
+        document.addEventListener('click', function (e) {
+          const timestamp = new Date().toISOString();
+          const objectType = getObjectType(e.target);
+          if (objectType === 'other') return;
+          console.log(`${timestamp}, click, ${objectType}`);
+        });
+    
+        window.addEventListener('load', () => {
+          const timestamp = new Date().toISOString();
+          const sections = document.querySelectorAll('section');
+          sections.forEach(sec => {
+            const objectType = 'section-view';
+            console.log(`${timestamp}, view, ${sec.id}`);
+          });
+        });
+    </script>
+    
     <footer>
         <h2>Connect With Me</h2>
         <a href="https://www.linkedin.com/in/viswanadha-kartikeya-yakkala-a07591320/" target="_blank" style="text-decoration: none; color: #0e76a8;"><i class="fab fa-linkedin fa-2x"></i></a>

@@ -38,21 +38,21 @@
                     <h3>Education</h3>
                     <div class="timeline">
                         <div class="timeline-item left">
-                            <div class="date">2024 - Present</div>
+                            <div class="date"><p>2024 - Present</p></div>
                             <div class="content">
                                 <h4>IIIT Hyderabad</h4>
                                 <p>BTech+MS in CSE</p>
                             </div>
                         </div>
                         <div class="timeline-item right">
-                            <div class="date">2022 - 2024</div>
+                            <div class="date"><p>2022 - 2024</p></div>
                             <div class="content">
                                 <h4>FIITJEE Junior College</h4>
                                 <p>Mathematics and Science</p>
                             </div>
                         </div>
                         <div class="timeline-item left">
-                            <div class="date">Up to 2022</div>
+                            <div class="date"><p>Up to 2022</p></div>
                             <div class="content">
                                 <h4>Vignan Bo Tree School</h4>
                                 <p>Upto 10th Grade</p>
@@ -160,6 +160,8 @@
             }
         });
     </script>
+
+    <!-- Q3 -->
     <div class="text-analyzer" id="textanalyzer">
         <h1>Send Me A Message</h1>
         <textarea id="textInput" rows="100" cols="100" placeholder="Enter your message here" style="width: 600px;height: 300px;"></textarea><br>
@@ -216,9 +218,40 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
+
+    <!-- Q2 Script -->
     <script>
-        
+        function getObjectType(target) {
+          if (target.tagName === 'IMG') return 'image';
+          if (target.tagName === 'A') return 'link';
+          if (target.tagName === 'P' || target.tagName === 'SPAN' || target.tagName === 'H1' || target.tagName === 'H2' || target.tagName === 'H3' || target.tagName === 'H4') return 'text';
+          if (target.tagName === 'BUTTON' || target.tagName === 'INPUT') return 'button/input';
+          if( target.tagName === 'TEXTAREA') return 'textarea';
+          return 'other';
+        }
+    
+        document.addEventListener('click', function (e) {
+          const timestamp = new Date().toISOString();
+          const objectType = getObjectType(e.target);
+          if(objectType === 'other') return;
+          if(objectType === 'textarea'){
+            console.log(`${timestamp}, view, ${objectType}`);
+          }
+          else{
+            console.log(`${timestamp}, click, ${objectType}`);
+          }
+        });
+    
+        window.addEventListener('load', () => {
+          const timestamp = new Date().toISOString();
+          const sections = document.querySelectorAll('section');
+          sections.forEach(sec => {
+            const objectType = 'section-view';
+            console.log(`${timestamp}, view, ${sec.id}`);
+          });
+        });
     </script>
+    
     <footer>
         <h2>Connect With Me</h2>
         <a href="https://www.linkedin.com/in/viswanadha-kartikeya-yakkala-a07591320/" target="_blank" style="text-decoration: none; color: #0e76a8;"><i class="fab fa-linkedin fa-2x"></i></a>
