@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="imgs/icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resp.css">
+</head>
+<body>
+    <header>
+        <div class="site-header" id="sh">
+            <a href="index.html" target="_self" class="site-branding">
+                <h2 class="site-title">Kartikeya</h2>
+            </a>
+        </div>
+        <nav id="nav">
+            <a href="index.html" target="_self" style="color: rgb(0, 136, 255);">Home</a>
+            <a href="#abt" target="_self" style="color: rgb(69, 116, 0);">About Me</a>
+            <a href="#pics" target="_self" style="color: rgb(16, 165, 165);">Photos</a>
+            <a href="#textanalyzer" target="_self" style="color: rgb(67, 168, 67);">Send Me A Message!</a>
+        </nav>
+    </header>
+    <div id="main" class="main">
+        <div class="main-content">
+            <div class="Intro" id="intro" style="animation-delay: 0s;">
+                <h2>Hello Guys</h2>
+                <p>I am Kartikeya</p>
+                <p>Welcome to my personal website!</p>
+                <!-- <p>Here you can find information about me, my interests, and my projects.</p> -->
+                <a href="#abt" style="text-decoration: none; color: black; font-size: medium;"><button class="abtbutton"
+                        id="abtbutton">Know More</button></a>
+            </div>
+            <div class="Intro2" id="intro2" style="animation-delay: 0.6s;">
+                <div class="education-section">
+                    <h3>Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item left">
+                            <div class="date">2024 - Present</div>
+                            <div class="content">
+                                <h4>IIIT Hyderabad</h4>
+                                <p>BTech+MS in CSE</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item right">
+                            <div class="date">2022 - 2024</div>
+                            <div class="content">
+                                <h4>FIITJEE Junior College</h4>
+                                <p>Mathematics and Science</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item left">
+                            <div class="date">Up to 2022</div>
+                            <div class="content">
+                                <h4>Vignan Bo Tree School</h4>
+                                <p>Upto 10th Grade</p>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-me" id="abt">
+        <h1>About Me</h1>
+        <br>
+        <div class="typing-lines">
+            <p class="typing-text line1">My name is Yakkala Viswanadha Kartikeya. I am a student at <abbr title="International Institute of Information Technology, Hyderabad">IIIT-H</abbr>.</p>
+            <p class="typing-text line2">I am currently in my first year of undergraduate studies as a Computer Science major.</p>
+            <p class="typing-text line3">I am interested in web development, astrophysics, quantum physics, and machine learning.</p>
+            <p class="typing-text line4">In my free time, I enjoy playing video games, watching movies, playing cricket, and reading books.</p>
+            <p class="typing-text line5">I enjoy taking up challenges and always try to finish them up.</p>
+            <p class="typing-text line6">I am a quick learner and I am always eager to learn new things.</p>
+        </div>
+        <h3>To know more about my achievements and projects:</h3>
+        <a href="about.html" style="text-decoration: none; color: black; font-size: medium;"><button class="about" id="about">More about me</button></a>
+    </div>
+    <script>
+        document.querySelector('nav a[href="#abt"]').addEventListener('click', function(e) {
+            resetTypingAnimations();
+        });
+        document.getElementById('abtbutton').addEventListener('click', function(e) {
+            resetTypingAnimations();
+        });
+        function resetTypingAnimations() {
+            const typingElements = document.querySelectorAll('.typing-text');
+            typingElements.forEach(element => {
+                element.style.animation = 'none';
+                element.offsetHeight;
+                element.style.animation = null;
+            });
+        }
+    </script>
+    <div class="pics" id="pics">
+        <h1>Photos</h1>
+        <div class="gallery">
+            <a href="imgs/photo4.jpg" class="display">
+                <img src="imgs/photo4.jpg" alt="Photo 4" style="width: 512px; height: 288px;">
+            </a>
+            <a href="imgs/photo7.jpg" class="display">
+                <img src="imgs/photo7.jpg" alt="Photo 7" style="width: 400px; height: 300px;">
+            </a>
+            <a href="imgs/photo2.jpg" class="display">
+                <img src="imgs/photo2.jpg" alt="Photo 2" style="width: 400px; height: 300px;">
+            </a>
+            <a href="imgs/photo3.jpg" class="display">
+                <img src="imgs/photo3.jpg" alt="Photo 3" style="width: 400px; height: 300px;">
+            </a>
+            <a href="imgs/photo6.jpg" class="display">
+                <img src="imgs/photo6.jpg" alt="Photo 6" style="width: 300px; height: 400px;">
+            </a>
+            <a href="imgs/photo1.png" class="display">
+                <img src="imgs/photo1.png" alt="Photo 1" style="width: 300px; height: 400px;">
+            </a>
+            <a href="imgs/photo8.jpg" class="display">
+                <img src="imgs/photo8.jpg" alt="Photo 8" style="width: 300px; height: 400px;">
+            </a>
+            <a href="imgs/photo5.jpg" class="display">
+                <img src="imgs/photo5.jpg" alt="Photo 5" style="width: 288px; height: 512px;">
+            </a>
+            <a href="imgs/photo9.jpg" class="display">
+                <img src="imgs/photo9.jpg" alt="Photo 9" style="width: 288px; height: 512px;">
+            </a>
+            <a href="imgs/photo10.jpg" class="display">
+                <img src="imgs/photo10.jpg" alt="Photo 10" style="width: 288px; height: 512px;">
+            </a>
+        </div>
+    </div>
+
+    <div id="display" class="display-container">
+        <span class="close" id="closeBtn">&times;</span>
+        <img id="displayImage" src="" alt="Full-size image" style="scale: 1.25;">
+    </div>
+
+    <script>
+        const display = document.getElementById("display");
+        const closeBtn = document.getElementById("closeBtn");
+        const displayImage = document.getElementById("displayImage");
+
+        const displayLinks = document.querySelectorAll(".display");
+
+        displayLinks.forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+                const imageSrc = this.getAttribute("href");
+                displayImage.src = imageSrc;
+                display.style.display = "flex";
+            });
+        });
+
+        closeBtn.addEventListener("click", function() {
+            display.style.display = "none";
+        });
+
+        window.addEventListener("click", function(event) {
+            if (event.target === display) {
+                display.style.display = "none";
+            }
+        });
+    </script>
+    <div class="text-analyzer" id="textanalyzer">
+        <h1>Send Me A Message</h1>
+        <textarea id="textInput" rows="100" cols="100" placeholder="Enter your message here" style="width: 600px;height: 300px;"></textarea><br>
+        <button id="analyzeButton" class="analyzebutton">Analyze</button>
+        <a href="mailto:viswanatha.kartikeya@gmail.com"><button id="sendmail" class="mailbutton">Send Message</button></a>
+        <br>
+        <div id="analysisResult"></div>
+    </div>
+    <script>
+        document.getElementById("analyzeButton").addEventListener("click", function() {
+            const text = document.getElementById("textInput").value;
+            const letterCount = text.replace(/[^a-zA-Z]/g, "").length;
+            const wordCount = text.split(/\s+/).filter(word => word.length > 0).length;
+            const lineCount = text.split(/\n/).length;
+            const specialChars = text.match(/[^a-zA-Z0-9\s]/g) || [];
+            const spaceCount = (text.match(/\s/g) || []).length;
+            const articles = text.match(/\b(a|an|the)\b/gi) || [];
+            const prepositions = text.match(/\b(in|on|at|to|for|with|about|against|between|by)\b/gi) || [];
+            const pronouns = text.match(/\b(I|we|you|he|she|it|they|me|us|him|her|them|mine|ours|yours|hers|his|theirs|my|our|your|their)\b/gi) || [];
+
+            const resultDiv = document.getElementById("analysisResult");
+            resultDiv.innerHTML = `<h2>Analysis Result:</h2>
+                <p>Word Count: ${wordCount}</p>
+                <p>Letter Count: ${letterCount}</p>
+                <p>Line Count: ${lineCount}</p>
+                <p>Space Count: ${spaceCount}</p>
+                <p>Special Character Count: ${specialChars.length}</p>
+                <p>Article Count: ${articles.length}</p>
+                <p>Preposition Count: ${prepositions.length}</p>
+                <p>Pronoun Count: ${pronouns.length}</p>`;
+
+            if (text.trim() === "") {
+                resultDiv.innerHTML = "<h3><i>Please enter a message to analyze.</i></h3>";
+            } 
+            else {
+                resultDiv.style.display = "block";
+            }
+        });
+        
+        document.getElementById("sendmail").addEventListener("click", function(e) {
+            const text = document.getElementById("textInput").value;
+            if(text.trim() !== "") {
+                let mailtoLink = "mailto:viswanatha.kartikeya@gmail.com?body=" + encodeURIComponent(text);
+                this.parentElement.setAttribute("href", mailtoLink);
+            } else {
+                alert("Please enter a message before sending!");
+                e.preventDefault();
+            }
+        });
+    </script>
+    <button id="backToTop" onclick="scrollToTop()">⇑</button>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <script>
+        
+    </script>
+    <footer>
+        <h2>Connect With Me</h2>
+        <a href="https://www.linkedin.com/in/viswanadha-kartikeya-yakkala-a07591320/" target="_blank" style="text-decoration: none; color: #0e76a8;"><i class="fab fa-linkedin fa-2x"></i></a>
+        &nbsp;
+        <a href="mailto:viswanatha.kartikeya@gmail.com" target="_blank" style="text-decoration: none; color: #ff3b3b;"><i class="fas fa-envelope fa-2x"></i></a>
+        &nbsp;
+        <a href="https://www.instagram.com/kartikeya_936/" target="_blank" style="text-decoration: none; "><i class="fab fa-instagram fa-2x"></i></a>
+        &nbsp;
+        <a href="https://github.com/YVKartikeya9" target="_blank" style="text-decoration: none; color: #000000;"><i class="fab fa-github fa-2x"></i></a>
+    </footer>
+</body>
+</html>
