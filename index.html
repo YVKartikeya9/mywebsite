@@ -180,7 +180,7 @@
             const text = document.getElementById("textInput").value;
             const letterCount = text.replace(/[^a-zA-Z]/g, "").length;
             const wordCount = text.split(/\s+/).filter(word => word.length > 0).length;
-            const lineCount = text.split(/\n/).length;
+            const newlineCount = text.split(/\n/).length;
             const specialChars = text.match(/[^a-zA-Z0-9\s]/g) || [];
             const spaceCount = (text.match(/\s/g) || []).length;
             const articles = text.match(/\b(a|an|the)\b/gi) || [];
@@ -191,10 +191,10 @@
             resultDiv.innerHTML = `<h2>Analysis Result:</h2>
                 <p>Word Count: ${wordCount}</p>
                 <p>Letter Count: ${letterCount}</p>
-                <p>Line Count: ${lineCount}</p>
+                <p>Newline Count: ${newlineCount}</p>
                 <p>Space Count: ${spaceCount}</p>
                 <p>Special Character Count: ${specialChars.length}</p>
-                <p>Article Count: ${articles.length}</p>
+                <p>Indefinite Article Count: ${articles.length}</p>
                 <p>Preposition Count: ${prepositions.length}</p>
                 <p>Pronoun Count: ${pronouns.length}</p>`;
 
