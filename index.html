@@ -183,7 +183,7 @@
             const newlineCount = text.split(/\n/).length;
             const specialChars = text.match(/[^a-zA-Z0-9\s]/g) || [];
             const spaceCount = (text.match(/\s/g) || []).length;
-            const articles = text.match(/\b(a|an|the)\b/gi) || [];
+            const articles = text.match(/\b(a|an)\b/gi) || [];
             const prepositions = text.match(/\b(in|on|at|to|for|with|about|against|between|by)\b/gi) || [];
             const pronouns = text.match(/\b(I|we|you|he|she|it|they|me|us|him|her|them|mine|ours|yours|hers|his|theirs|my|our|your|their)\b/gi) || [];
 
